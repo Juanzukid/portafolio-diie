@@ -1,0 +1,32 @@
+---
+import Funcion from "./Funcion.astro";
+
+const { functions } = Astro.props;
+const parseFunctions = JSON.parse(functions);
+console.log(parseFunctions);
+---
+
+<div class="w-full">
+  <div class="text-center text-white text-5xl">Funciones y Características</div>
+  <!-- <div class="flex gap-6 mt-12">
+    <div class="flex flex-col gap-3">
+      <Funcion />
+      <Funcion />
+      <Funcion />
+      <Funcion />
+    </div>
+    <div class="flex flex-col gap-3">
+      <Funcion />
+      <Funcion />
+      <Funcion />
+      <Funcion />
+    </div>
+  </div> -->
+  <div class="grid grid-cols-2 gap-6 mt-12">
+    {
+      Object.entries(parseFunctions).map(([key, value]) => (
+        <Funcion key={key} funcion={value} />
+      ))
+    }
+  </div>
+</div>

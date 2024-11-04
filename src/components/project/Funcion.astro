@@ -1,0 +1,12 @@
+---
+const { key, funcion } = Astro.props;
+
+console.log(key, funcion);
+---
+
+<div
+  class="w-[100%] rounded-sm border-[1px] border-gray-400 border-solid flex flex-col gap-3 text-white py-3 px-3"
+>
+  <div class="text-xl text-blue-200">{key}</div>
+  <div class="text-sm">{funcion}</div>
+</div>

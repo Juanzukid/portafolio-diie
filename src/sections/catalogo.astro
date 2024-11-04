@@ -1,0 +1,141 @@
+---
+import CatalogoSection from "../components/CatalogoSection.astro";
+
+const simuladores = [
+  {
+    title: "Simuladores de Navegación Marítima",
+    description:
+      "Simulador de Navegación Marítima que permite a los usuarios experimentar la planificación de rutas, el manejo de embarcaciones y la gestión de situaciones de emergencia en el mar.",
+  },
+  {
+    title: "Simulador de Sumergible",
+    description:
+      "Simulador que emula la operación de sumergibles, permitiendo a los usuarios explorar el fondo marino y realizar investigaciones subacuáticas en un entorno controlado.",
+  },
+  {
+    title: "Simuladores de Vuelo",
+    description:
+      "Simuladores de vuelo que ofrecen una experiencia inmersiva en la conducción de diferentes tipos de aeronaves, incluyendo entrenamientos en navegación y gestión de vuelo.",
+  },
+  {
+    title: "Simulador de Conducción de Vehículos",
+    description:
+      "Simulador que permite a los usuarios aprender y practicar habilidades de conducción en diversos entornos, incluyendo carreteras urbanas y rurales, y condiciones climáticas variables.",
+  },
+  {
+    title: "Simulador de Realidad Virtual",
+    description:
+      "Simulador que ofrece experiencias inmersivas en un entorno virtual, permitiendo a los usuarios interactuar con escenarios 3D en tiempo real.",
+  },
+  {
+    title: "Simulador de Entrenamiento de Habilidades",
+    description:
+      "Simulador que permite a los usuarios practicar y mejorar habilidades  específicas en un entorno controlado y medido.",
+  },
+  {
+    title: "Simulación en General",
+    description:
+      "Simulador versátil que abarca una amplia gama de escenarios y disciplinas, permitiendo a los usuarios experimentar situaciones del mundo real en un entorno virtual, desde la gestión de proyectos hasta la toma de decisiones en crisis. Este simulador es ideal para la formación y el entrenamiento en diversas áreas, brindando la oportunidad de aprender mediante la práctica y la retroalimentación en tiempo real.",
+  },
+];
+const softwares = [
+  {
+    title: "Software de Gestión de Proyectos",
+    description:
+      "Herramienta que permite planificar, ejecutar y supervisar proyectos de manera eficiente, facilitando la colaboración entre equipos y el seguimiento del progreso.",
+  },
+  {
+    title: "Software de Gestión de Inventario",
+    description:
+      "Sistema que permite a las empresas controlar y gestionar su inventario de productos, optimizando el flujo de bienes y reduciendo costos operativos.",
+  },
+  {
+    title: "Software de Gestión de Mantenimiento de Equipos",
+    description:
+      "Herramienta que ayuda a programar, realizar y supervisar el mantenimiento preventivo y correctivo de equipos, garantizando su funcionamiento óptimo.",
+  },
+  {
+    title: "Software de Control de Accesos",
+    description:
+      "Sistema que gestiona el acceso a instalaciones y recursos, utilizando tecnologías como tarjetas de identificación, biometría y códigos de acceso.",
+  },
+  {
+    title: "Repositorios Digitales",
+    description:
+      "Plataforma que permite almacenar, organizar y acceder a recursos digitales de manera eficiente, facilitando la gestión del conocimiento y la información.",
+  },
+  {
+    title: "Bibliotecas Digitales",
+    description:
+      "Sistema que proporciona acceso a colecciones de libros, revistas y otros materiales en formato digital, facilitando la lectura y la investigación.",
+  },
+  {
+    title: "Software de Gestión Hospitalaria",
+    description:
+      "Aplicación integral que gestiona procesos administrativos y clínicos en hospitales, mejorando la atención al paciente y la eficiencia operativa.",
+  },
+  {
+    title: "Software de CRM (Gestión de Relaciones con Clientes)",
+    description:
+      "Aplicación que ayuda a las empresas a gestionar las interacciones con clientes y potenciales clientes, mejorando la satisfacción y fidelización.",
+  },
+];
+const modelados = [
+  {
+    title: "Modelado de Piezas Mecánicas",
+    description:
+      "Creación de modelos 3D de componentes y piezas mecánicas, permitiendo visualizaciones detalladas y análisis funcionales para la ingeniería y fabricación.",
+  },
+  {
+    title: "Modelado de Objetos",
+    description:
+      "Diseño y creación de modelos 3D de objetos cotidianos, utilizados en visualización, animación y prototipado rápido en diversas industrias.",
+  },
+  {
+    title: "Modelado de Planos",
+    description:
+      "Generación de planos en 3D que representan estructuras arquitectónicas o ingenierías, facilitando la comprensión y planificación de proyectos.",
+  },
+  {
+    title: "Modelado de Ambientes",
+    description:
+      "Desarrollo de escenas y ambientes 3D para videojuegos, simulaciones y visualizaciones arquitectónicas, creando espacios inmersivos y realistas.",
+  },
+  {
+    title: "Modelado de Personajes",
+    description:
+      "Creación de modelos 3D de personajes para videojuegos y películas, incluyendo rigging y texturización para animaciones detalladas.",
+  },
+  {
+    title: "Modelado de Vehículos",
+    description:
+      "Diseño y modelado 3D de vehículos, desde automóviles hasta aeronaves, permitiendo análisis aerodinámicos y visualización en tiempo real.",
+  },
+  {
+    title: "Modelado de Productos",
+    description:
+      "Creación de modelos 3D de productos para marketing y diseño industrial, ayudando en la presentación visual y la revisión de prototipos.",
+  },
+  {
+    title: "Modelado de Escenas Naturales",
+    description:
+      "Diseño de paisajes y entornos naturales en 3D, utilizados en simulaciones, videojuegos y visualizaciones de proyectos de conservación.",
+  },
+];
+---
+
+<section id="Catálogo" class="h-screen snap-center">
+  <div class="w-screen">
+    <div class="text-white text-center text-5xl mb-12">CATÁLOGO</div>
+    <p class="text-center text-white text-2xl">
+      Gama de productos que ofrece la Agencia Bolivariana para Actividades
+      Espaciales.
+    </p>
+  </div>
+
+  <div class="mt-20 flex justify-center gap-5">
+    <CatalogoSection title="Simuladores" index="0" items={simuladores} />
+    <CatalogoSection title="Softwares" index="1" items={softwares} />
+    <CatalogoSection title="Modelados 3D" index="2" items={modelados} />
+  </div>
+</section>

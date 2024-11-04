@@ -1,0 +1,134 @@
+---
+import Description from "../../components/project/Description.astro";
+import Funciones from "../../components/project/Funciones.astro";
+import Galeria from "../../components/project/Galeria.astro";
+import Hero from "../../components/project/Hero.astro";
+import Tecnologias from "../../components/project/Tecnologias.astro";
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../../public/seed/projects.js";
+
+type Project = {
+  id_project: string;
+  title: string;
+  description: string;
+  logo: string;
+  functions: string;
+  tecnologys: string;
+  images: string;
+  tags: string;
+};
+
+//ASTRO NO PERMITE RUTAS DINAMICAS, POR ESO HAGO LO SIGUIENTE.
+
+//UNA FUNCION ASINCRONA QUE BUSCA "getAllProjectIds" EN LA BASE DE DATOS DE ASTRO
+//TODOS LOS ID EXISTENTES Y LOS RETORNA.
+// export async function getAllProjectIds() {
+//   const projects_ids = await db
+//     .select({
+//       id: Projects.id_project,
+//     })
+//     .from(Projects);
+
+//   return projects_ids;
+// }
+
+//UNA FUNCION ASINCRONA QUE PRACTICAMENTE LE DICE A ASTRO, QUE SOLO VAN A EXISTIR LAS RUTAS PARA ESOS ID
+//VERIFIA EN LOS ID CONSULTADOS SI EXISTE EL ID PASADO POR RUTA Y LO RETORNA COMO PARAMETRO DE ASTRO.
+export async function getStaticPaths() {
+  //  const projects = await getAllProjectIds();
+  // return projects.map((project) => ({
+  //   //  params: { id: project.id },
+  // }));
+  // return projects.filter((project) => project.id_project === id)
+  return projects.map((project) => ({
+    params: { id: project.id_project }, // Retornar el id en params
+  }));
+}
+
+//DESTRUCTURACION DE LOS PARAMETROS EN LA VARIABLE ID.
+const { id } = Astro.params;
+const actual_project = projects.find((project) => project.id_project === id);
+
+//CONSULTA EN LA BASE DE DATOS DE ASTRO EL PROJECTO CON ESE ID.
+// const project = await db
+//   .select()
+//   .from(Projects)
+//   .where(like(Projects.id_project, `${id}`));
+
+//DESTRUCTURACION DE LOS DATOS DEL PROJECTO PARA UN CODIGO MAS LIMPIO.
+const { id_project, title, description, logo, functions, tecnologys, images } =
+  actual_project as Project;
+
+//prev y next
+let prev = 8;
+let next = 2;
+
+if (+id_project > 1) {
+  prev = +id_project - 1;
+}
+if (+id_project === 1) {
+  prev = 8;
+}
+if (+id_project < 8) {
+  next = +id_project + 1;
+}
+if (+id_project === 8) {
+  next = 1;
+}
+---
+
+<Layout title={title}>
+  <main class="relative">
+    <div
+      class="w-screen flex flex-col items-center lg:px-72 md:px-16 sm:px-8 px-4"
+    >
+      <div class="mt-20">
+        <Hero logo={logo} title={title} />
+      </div>
+      <div class="mt-12">
+        <Description description={description} />
+      </div>
+      <div class="mt-36 lg:w-[1200px] md:w-[100%] sm:w-[600px] w-100">
+        <Galeria images={images} />
+      </div>
+      <div class="mt-36 w-100">
+        <Funciones functions={functions} />
+      </div>
+      <div class="mt-36">
+        <!-- <Tecnologias tecnologias={tecnologys} /> -->
+      </div>
+
+      <div class="mt-36 bg-white"></div>
+      <div class="fixed right-10 top-10">
+        <a href="/">
+          <button
+            class="bg-blue-950 hover:bg-blue-800 w-20 p-1 rounded-lg text-white font-bold"
+            >Inicio</button
+          ></a
+        >
+      </div>
+      <div
+        class="fixed left-0 right-0 flex justify-between items-center bottom-1/2"
+      >
+        <div class="w-20 text-right flex justify-end">
+          <a href=`/${prev}`
+            ><div
+              class="bg-white w-10 h-10 rounded-full flex justify-center items-center"
+            >
+              <img src="/public/images/icons/prev.png" alt="" />
+            </div></a
+          >
+        </div>
+        <div class="w-20">
+          <a href=`/${next}`
+            ><div
+              class="bg-white w-10 h-10 rounded-full flex justify-center items-center"
+            >
+              <img src="/public/images/icons/next.png" alt="" />
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

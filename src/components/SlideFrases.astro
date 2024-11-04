@@ -1,0 +1,62 @@
+---
+import SlidePageFrase from "../components/SlidePageFrase.astro";
+---
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Slider main container -->
+<div class="w-screen">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <SlidePageFrase
+        titulo="“El arte desafía la tecnología, y la tecnología inspira el arte.”"
+        autor="— Jhon Lasseter"
+      />
+      <SlidePageFrase
+        titulo="“Cualquier tecnología suficientemente avanzada es equivalente a la magia.”"
+        autor="— Sir Arthur C. Clarke"
+      />
+      <SlidePageFrase
+        titulo="“La tecnología es importante, pero lo único que realmente importa es lo que hacemos con ella.”"
+        autor="— Muhammad Yunus"
+      />
+      <SlidePageFrase
+        titulo="“El gran motor del cambio - la tecnología”"
+        autor="— Alvin Toffler"
+      />
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<style>
+  .swiper {
+    /* width: 600px; */
+    height: 400px;
+  }
+</style>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  var swiper = new Swiper(".mySwiper", {
+    //   slidesPerView: 1,
+    //   spaceBetween: 30,
+    loop: true,
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+  });
+</script>
