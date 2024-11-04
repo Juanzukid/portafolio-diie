@@ -4,7 +4,7 @@ import { funciones } from "./descriptions.js";
 export const projects = [
     {
         id_project: "1",
-        title: "Sistema de gestion de Inventario",
+        title: "Sistema de Gestión de Inventario",
         description: descriptions.inventario,
         logo: "inventario-logo.png",
         functions: JSON.stringify(funciones.inventario),
@@ -56,7 +56,7 @@ export const projects = [
     {
 
         id_project: "6",
-        title: "DGH",
+        title: "Sistema de Gestión de Datos",
         description: descriptions.DGH,
         logo: "dgh-logo.png",
         functions: JSON.stringify(funciones.DGH),
