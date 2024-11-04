@@ -36,7 +36,7 @@ export const projects = [
         id_project: "4",
         title: "Simulador de Sumergible",
         description: descriptions.submarino,
-        logo: "submarino-logo.png",
+        logo: "Submarino-logo.png",
         functions: JSON.stringify(funciones.submarino),
         tecnologys: "Unity-C#",
         images: "sub_1.png/sub_2.png/sub_3.png/sub_4.png/sub_5.png/sub_6.png/sub_7.png",
