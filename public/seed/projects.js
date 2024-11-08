@@ -85,5 +85,49 @@ export const projects = [
         tecnologys: "Tecnoligias 6",
         images: "pm_1.png/pm_2.png/pm_3.png/pm_4.png/pm_5.png",
         tags: "Gestion-Gerencia-Seguimiento"
-    }
+    },
+    {
+
+        id_project: "9",
+        title: "Control de Asistencia",
+        description: descriptions.asistencia,
+        logo: "asistencia-logo.png",
+        functions: JSON.stringify(funciones.asistencia),
+        tecnologys: "Tecnoligias 6",
+        images: "asi_1.png/asi_2.png/asi_3.png/asi_4.png/asi_5.png/asi_6.png/asi_7.png/asi_8.png",
+        tags: "Gestion-Personal-Seguimiento"
+    },
+    {
+
+        id_project: "10",
+        title: "DEMO: Gestion Hospitalaria",
+        description: descriptions.hospital,
+        logo: "hospital-logo.png",
+        functions: JSON.stringify(funciones.hospital),
+        tecnologys: "Tecnoligias 6",
+        images: "hos_1.JPG/hos_2.JPG/hos_3.JPG/hos_4.JPG/hos_5.JPG/hos_6.JPG/hos_7.JPG/hos_8.JPG",
+        tags: "Gestion-Personal-Seguimiento"
+    },
+    {
+
+        id_project: "11",
+        title: "DRONEX: Fabricación de drones",
+        description: descriptions.drones,
+        logo: "drones-logo.webp",
+        functions: JSON.stringify(funciones.drones),
+        tecnologys: "Tecnoligias 6",
+        images: "dr_1.jpg/dr_2.jpg/dr_3.jpg/dr_4.jpg/dr_5.jpg/dr_6.jpg",
+        tags: "Dron-Electrónica-Robótica"
+    },
+    {
+
+        id_project: "12",
+        title: "Automatización IoT e IA",
+        description: descriptions.automatizacion,
+        logo: "automatizacion-logo.png",
+        functions: JSON.stringify(funciones.automatizacion),
+        tecnologys: "Tecnoligias 6",
+        images: "aut_1.PNG/aut_2.jpeg/aut_3.jpeg/aut_4.jpeg/aut_5.jpeg/aut_6.jpeg/aut_7.jpg",
+        tags: "Gestion-Personal-Seguimiento"
+    },
 ]; 

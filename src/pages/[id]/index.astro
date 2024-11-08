@@ -60,19 +60,19 @@ const { id_project, title, description, logo, functions, tecnologys, images } =
   actual_project as Project;
 
 //prev y next
-let prev = 8;
+let prev = projects.length;
 let next = 2;
 
 if (+id_project > 1) {
   prev = +id_project - 1;
 }
 if (+id_project === 1) {
-  prev = 8;
+  prev = projects.length;
 }
-if (+id_project < 8) {
+if (+id_project < projects.length) {
   next = +id_project + 1;
 }
-if (+id_project === 8) {
+if (+id_project === projects.length) {
   next = 1;
 }
 ---

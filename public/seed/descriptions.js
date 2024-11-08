@@ -7,6 +7,10 @@ export const descriptions = {
     DGH: "Sistema de Información Logística empleado para gestionar el manejo y control de datos del personal de la ABAE, facilitando el acceso a información requerida por la DGH para actividades a fines.",
     vehiculo: "Sistema de Información Logística empleado para gestionar el manejo y control de los vehículos adscritos a una institución, permitiendo la protección, verificación y eficiencia en las operaciones realizadas de una forma óptima, exacta, oportuna, novedosa, accesible y manejable.",
     project_manager: "El Sistema de Gestión de Proyectos es una herramienta integral diseñada para facilitar la planificación, ejecución y seguimiento de proyectos de manera eficiente. Este sistema permite a los project managers organizar tareas, asignar recursos y supervisar el progreso en tiempo real, asegurando que los proyectos se realicen dentro de los plazos y presupuestos establecidos. Con una interfaz intuitiva y funcionalidades personalizables, el sistema promueve la colaboración entre equipos y la transparencia en la gestión, lo que contribuye a una mejor toma de decisiones y a la maximización de la productividad.",
+    asistencia: "Este software avanzado de gestión de asistencias está diseñado para ayudar a las organizaciones a mantener un control exhaustivo y preciso de la asistencia de su personal. A través de un sistema intuitivo, permite registrar tanto la presencia como la ausencia de los empleados, con la capacidad de especificar el motivo de cada inasistencia. La herramienta incluye un calendario visual que facilita la consulta rápida del historial de asistencia, además de opciones para generar reportes personalizados que pueden imprimirse según las necesidades de la empresa. Asimismo, el software incorpora gráficos analíticos que permiten detectar patrones y tendencias, ayudando a los gerentes a tomar decisiones informadas sobre la gestión del personal. Adicionalmente, cuenta con funciones de notificación que envían alertas automáticas en caso de inasistencias repetidas o llegadas tarde, así como opciones avanzadas de exportación de datos y filtros que hacen posible segmentar la información de manera precisa. Esta herramienta se puede integrar con sistemas de recursos humanos existentes, brindando así una solución completa para optimizar la administración del personal y el análisis de rendimiento en función de la asistencia.",
+    hospital: "Este software de gestión hospitalaria proporciona una solución integral para la administración de inventarios de medicamentos, la creación de recetas médicas y la gestión de usuarios en hospitales y clínicas. Facilita el seguimiento exhaustivo de los medicamentos en inventario y registra todas las transacciones relacionadas, asegurando que el personal médico siempre tenga información precisa sobre el stock disponible. La aplicación permite generar y personalizar recetas médicas, con la opción de imprimirlas para facilitar su entrega a los pacientes. Además, incluye gráficos analíticos que muestran tendencias y estadísticas de uso de medicamentos, ayudando a la toma de decisiones informadas. El sistema también cuenta con roles de usuario para gestionar los niveles de acceso y notificaciones automáticas para alertar al personal sobre medicamentos críticos, caducidad próxima o transacciones importantes, asegurando una gestión eficiente y segura en el entorno hospitalario.",
+    drones: "El Programa DRONEX consiste  en un plan de desarrollo de plataformas aéreas no tripuladas, priorizando el diseño nacional por parte del equipo de ingenieros de la ABAE, así como la manufactura y mantenimiento en las instalaciones de la agencia, hasta su operación en investigación  y oferta de servicios. Este proceso implica también la  estandarización y documentación  de  las metodologías utilizadas en el programa.",
+    automatizacion: "El proyecto es un prototipo de torreta con seguimiento de siluetas humanas y de colores (azul, verde y rojo) utilizando inteligencia artificial (OpenCV y Mediapipe). Está equipado con una cámara, dos servomotores y un raspberry pi Modelo 4, junto con un extensor. El raspberry se encarga de controlar todo el funcionamiento de la torreta, donde se tienen los códigos de seguimiento desarrollados en Python y en el extensor se conectan los dos servomotores junto con la cámara y además, proporciona la alimentación al sistema. Se crea un cuadro de mandos donde se representan los valores de temperatura y humedad registrados por los sensores. En el cuadro de mandos se muestra un mapa indicando la ubicación actual, un velocímetro expresado en km/h y el histórico de velocidad, la altitud sobre el nivel del mar y el histórico de altitud y el número de satélites a los que está conectado el GPS.",
 }
 
 export const funciones = {
@@ -87,5 +91,42 @@ export const funciones = {
         "Informes y Análisis": "Genera informes detallados sobre el progreso, el rendimiento del equipo y el estado del proyecto, proporcionando información clave para la toma de decisiones.",
         "Interfaz Intuitiva": "Ofrece una experiencia de usuario amigable que facilita la navegación y gestión de proyectos, sin necesidad de formación técnica especializada.",
         "Alertas y Notificaciones": "Envía avisos sobre plazos, actualizaciones y cambios en el estado del proyecto, ayudando a mantener a todos informados.",
+    },
+    asistencia: {
+        "Registro de asistencia y ausencias": "Guarda el estado diario de cada empleado, incluyendo motivos de inasistencia.",
+        "Calendario visual": "Proporciona una vista de calendario para ver el historial de asistencia.",
+        "Reportes personalizados": "Genera reportes detallados para analizar el comportamiento de asistencia del equipo.",
+        "Gráficas de análisis": "Muestra tendencias y patrones de asistencia a través de gráficos intuitivos.",
+        "Notificaciones automáticas": "Envía recordatorios o alertas de ausencia y llegadas tarde.",
+        "Exportación de datos": "Permite exportar reportes y registros a formatos como PDF o Excel.",
+        "Filtros avanzados": "Filtra registros por fechas, departamentos, o tipos de inasistencia.",
+        "Control de permisos de usuario": "Configura el acceso según roles, protegiendo la información sensible.",
+    },
+    hospital: {
+        "Inventario de medicamentos": "Permite gestionar el stock de medicamentos, incluyendo detalles sobre cantidad, caducidad y ubicación.",
+        "Transacciones de medicamentos": "Registra todas las entradas y salidas de medicamentos para llevar un control detallado del inventario.",
+        "Generación de recetas médicas": "Facilita la creación y personalización de recetas para pacientes.",
+        "Impresión de recetas": "Permite imprimir las recetas generadas para su entrega al paciente.",
+        "Gráficos de datos": "Visualiza tendencias y estadísticas sobre el uso y consumo de medicamentos.",
+        "Roles de usuario": "Ofrece control de acceso mediante roles, asegurando que solo personal autorizado acceda a información sensible.",
+        "Notificaciones automáticas": "Envía alertas sobre niveles críticos de stock, caducidades próximas y transacciones importantes.",
+        "Historial de transacciones": "Guarda un registro completo de cada transacción de medicamentos para futuras referencias.",
+        "Búsqueda y filtrado avanzado": "Facilita la búsqueda rápida de medicamentos y transacciones específicas.",
+    },
+    drones: {
+        "Entrenamiento": "Desarrollo de aeronaves RPA para el entrenamiento de pilotos humanos y de algoritmos de IA para el control de vuelo.",
+        "Inspección": "Desarrollo de aeronaves que permitan la inspección de estructuras de gran tamaño como torres eléctricas, represas, edificios y puentes.",
+        "Fotogrametría": "Desarrollo de aeronaves que permitan la obtención de imágenes de terrenos que por su extensión y detalle requerido no ameriten el uso de tomas satelitales.",
+        "Agricultura de precisión": "Desarrollo de RPAs para el despliegue de fertilizantes, control de plagas, análisis de calidad del aire, entre otros según la carga útil a bordo.",
+        "Plataformas de prueba": "Uso de RPA como aeronaves de prueba de equipos como cámaras, computadores de vuelo, sensores atmosféricos, antenas y sistemas de comunicación.",
+        "Exploración y reconocimiento aéreo": "Desarrollo de aeronaves que permitan la exploración de grandes extensiones de terreno en tiempo real con fines científicos, planificación, seguridad y defensa."
+    },
+    automatizacion: {
+        "Seguimiento Inteligente": "Detección y seguimiento de siluetas humanas y colores específicos (azul, verde y rojo) mediante IA, utilizando OpenCV y Mediapipe.",
+        "Visualización de Datos": "Cuadro de mandos con lecturas de temperatura y humedad, ubicación en mapa, número de satélites conectados, velocímetro en km/h con histórico de velocidad e indicador de altitud sobre el nivel del mar con su histórico.",
+        "Componentes": "Raspberry Pi Modelo 4 como controlador central, cámara y dos servomotores conectados a un extensor que también alimenta el sistema.",
+        "Software": "Algoritmos de seguimiento programados en Python.",
+        "Sensores": "Sensores para la medición de temperatura, humedad, velocidad y altitud."
     }
+
 }

@@ -68,7 +68,7 @@ console.log(images_array);
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 0.7rem;
   }
 
@@ -99,7 +99,7 @@ console.log(images_array);
       {
         images_array.map((image: string) => (
           <div class="swiper-slide">
-            <img src={`/images/gallery/${image}`} />
+            <img class="" src={`/images/gallery/${image}`} />
           </div>
         ))
       }
