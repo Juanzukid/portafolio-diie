@@ -134,7 +134,7 @@ const modelados = [
 ];
 ---
 
-<section id="Catálogo" class="h-screen snap-center">
+<section id="Catálogo" class="h-auto lg:h-screen snap-center">
   <div class="w-screen">
     <div class="text-white text-center text-5xl mb-12">CATÁLOGO</div>
     <p class="text-center text-white text-2xl">
@@ -143,7 +143,9 @@ const modelados = [
     </p>
   </div>
 
-  <div class="mt-20 flex justify-center gap-5">
+  <div
+    class="mt-20 px-12 lg:px-48 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-5"
+  >
     <CatalogoSection title="Simuladores" index="0" items={simuladores} />
     <CatalogoSection title="Software y Robótica" index="1" items={softwares} />
     <CatalogoSection title="Modelados 3D" index="2" items={modelados} />
