@@ -22,16 +22,21 @@ console.log(projects);
   }
 </style>
 
-<section id="Destacados" class="h-screen snap-center">
-  <div class="text-white text-center text-5xl mt-28 mb-12">
-    PROYECTOS DESTACADOS
-  </div>
-  <div class="w-[75%] mx-auto flex justify-center align-middle gap-5">
-    <div class="swiper SwiperDestacados">
-      <div class="swiper-wrapper">
-        {projects.map((project) => <CardProject project={project} />)}
+<section
+  id="Destacados"
+  class="h-screen snap-center flex flex-col justify-center"
+>
+  <div>
+    <div class="text-white text-center text-5xl mt-28 mb-12">
+      PROYECTOS DESTACADOS
+    </div>
+    <div class="w-[75%] mx-auto flex justify-center align-middle gap-5">
+      <div class="swiper SwiperDestacados">
+        <div class="swiper-wrapper">
+          {projects.map((project) => <CardProject project={project} />)}
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
