@@ -20,22 +20,51 @@ console.log(projects);
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color: #000;
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .swiper-pagination-bullet-active {
+      color: #fff !important;
+      background: #ff0000 !important;
+    }
+
+    div.swiper-pagination > span.swiper-pagination-bullet  {
+      /* width: 90px; */
+      color: red !important;
+      background: red !important;
+    }
 </style>
 
 <section
   id="Destacados"
-  class="h-screen snap-center flex flex-col justify-center"
+  class="h-auto snap-center flex flex-col justify-center mb-32"
 >
   <div>
-    <div class="text-white text-center text-5xl mt-28 mb-12">
+    <div class="text-white text-center text-5xl mt-28 mb-12 ">
       PROYECTOS DESTACADOS
     </div>
-    <div class="w-[75%] mx-auto flex justify-center align-middle gap-5">
+    <div class="w-[75%] mx-auto flex justify-center align-middle gap-5 sm:hidden">
       <div class="swiper SwiperDestacados">
         <div class="swiper-wrapper">
           {projects.map((project) => <CardProject project={project} />)}
         </div>
         <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="w-[100%] mx-auto hidden md:flex justify-center align-middle">
+      <div class="">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-10">
+          {projects.map((project) => <CardProject project={project} />)}
+        </div>
       </div>
     </div>
   </div>
@@ -44,7 +73,7 @@ console.log(projects);
 <script type="module">
   import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-  var swiperDestacados = new Swiper(".SwiperDestacados", {
+  /*var swiperDestacados = new Swiper(".SwiperDestacados", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -59,5 +88,22 @@ console.log(projects);
     pagination: {
       el: ".swiper-pagination",
     },
-  });
+  });*/
+  var swiperDestacados = new Swiper(".SwiperDestacados", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      //   renderBullet: function (index, className) {
+      //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+      //   },
+      // },
+    });
 </script>
