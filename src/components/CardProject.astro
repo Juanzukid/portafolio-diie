@@ -25,15 +25,17 @@ const tags_array = tags.split("-");
 </style>
 
 <!-- component -->
-<div class="swiper-slide flex justify-between">
-  <div class="flex flex-col h-[450px] w-[350px] mx-auto bg-gray-800 rounded-lg">
+<div
+  class="group swiper-slide flex justify-between transition duration-300 ease-in-out hover:scale-110 relative"
+>
+  <div class="flex flex-col h-[350px] w-[350px] mx-auto bg-gray-800 rounded-lg">
     <a href=`/${id_project}`>
       <div
         class="bg-gray-100 h-[250px] rounded-lg rounded-b-none overflow-hidden bg-cover bg-no-repeat grid place-content-center"
       >
         <div>
           <img
-            class="w-[200px] h-auto rounded-lg rounded-b-none transition duration-300 ease-in-out hover:scale-110"
+            class="w-[200px] h-auto rounded-lg rounded-b-none"
             src=`/images/logos/${logo}`
             alt="thumbnail"
             loading="lazy"
@@ -41,34 +43,55 @@ const tags_array = tags.split("-");
         </div>
       </div>
     </a>
-    <div class="flex justify-start gap-3 -mt-4 px-4 z-50">
-      <span
-        class="inline-block ring-4 bg-orange-700 ring-gray-800 rounded-full text-xs tracking-wide text-gray-100 px-3 pt-0.5"
-      >
-        {tags_array[0]}
-      </span>
-      <span
-        class="inline-block ring-4 bg-blue-500 ring-gray-800 rounded-full text-xs tracking-wide text-gray-100 px-3 pt-0.5"
-      >
-        {tags_array[1]}
-      </span>
-      <span
-        class="inline-block ring-4 bg-gray-500 ring-gray-800 rounded-full text-xs tracking-wide text-gray-100 px-3 pt-0.5"
-      >
-        {tags_array[2]}
-      </span>
+    <div
+      class="w-full h-[100px] rounded-b-lg flex flex-col justify-center relative"
+    >
+      <div class="flex justify-center gap-3 px-4 z-20 absolute -top-2 w-full">
+        <div
+          class="inline-block ring-4 bg-blue-800 ring-gray-800 rounded-full text-xs tracking-wide text-gray-100 px-3 py-0.5"
+        >
+          <span>{tags_array[0]}</span>
+        </div>
+        <div
+          class="inline-block ring-4 bg-blue-800 ring-gray-800 rounded-full text-xs tracking-wide text-gray-100 px-3 py-0.5"
+        >
+          {tags_array[1]}
+        </div>
+        <div
+          class="inline-block ring-4 bg-blue-800 ring-gray-800 rounded-full text-xs tracking-wide text-gray-100 px-3 py-0.5"
+        >
+          {tags_array[2]}
+        </div>
+      </div>
+      <div class="py-2 px-4">
+        <h1
+          class="text-xl font-medium leading-6 tracking-wide text-gray-100 hover:text-blue-400 cursor-pointer text-center"
+        >
+          <a class="text-center" href=`/${id_project}`>{title}</a>
+        </h1>
+      </div>
     </div>
-    <div class="py-2 px-4 mt-2">
-      <h1
-        class="text-xl font-medium leading-6 tracking-wide text-gray-100 hover:text-blue-400 cursor-pointer"
+  </div>
+
+  <div
+    class="absolute top-0 w-[350px] h-[250px] z-10 bg-transparent rounded-t-lg opacity-0 duration-300 ease-in-out group-hover:opacity-100 truncate text-white ring-0 backdrop-blur-sm border-none hidden md:block"
+  >
+    <div class="w-full h-[250px] bg-black/50 p-4">
+      <textarea
+        disabled
+        name="description"
+        id="description"
+        cols="45"
+        rows="10"
+        class="overflow-hidden bg-transparent text-white text-sm leading-5 tracking-wide"
+        style="resize: none;"
       >
-        <a href=`/${id_project}`>{title}</a>
-      </h1>
-    </div>
-    <div class="px-4 pb-4 h-full flex flex-col justify-between gap-2">
-      <!-- <p class="text-gray-400 font-normal leading-5 tracking-wide">
         {description}
-      </p> -->
+      </textarea>
+    </div>
+  </div>
+</div>
+<!-- <div class="px-4 pb-4 h-full flex flex-col justify-between gap-2">
       <textarea
         disabled
         name="description"
@@ -84,26 +107,4 @@ const tags_array = tags.split("-");
         class="font-semibold hover:text-blue-400 text-gray-100 cursor-pointer"
         >Leer más ...</a
       >
-    </div>
-    <div class="flex flex-row items-end w-full px-4">
-      <!-- <div class="flex border-t border-gray-700 w-full py-4"> -->
-      <!-- <div class="flex items-center space-x-3 border-gray-700 w-full">
-          <img
-            class="object-cover w-8 h-8 border-2 border-white rounded-full"
-            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-            alt="profile users"
-            loading="lazy"
-          />
-          <div class="">
-            <p class="text-sm font-semibold tracking-wide text-gray-200">
-              Author {tags}
-            </p>
-            <p class="text-xs font-light tracking-wider text-gray-300">
-              2 Hours ago
-            </p>
-          </div>
-        </div> -->
-      <!-- </div> -->
-    </div>
-  </div>
-</div>
+    </div> -->

@@ -22,26 +22,26 @@ console.log(projects);
   }
 
   .swiper-pagination-bullet {
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      line-height: 20px;
-      font-size: 12px;
-      color: #000;
-      opacity: 1;
-      background: rgba(255, 255, 255, 0.2);
-    }
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+  }
 
-    .swiper-pagination-bullet-active {
-      color: #fff !important;
-      background: #ff0000 !important;
-    }
+  .swiper-pagination-bullet-active {
+    color: #fff !important;
+    background: #ff0000 !important;
+  }
 
-    div.swiper-pagination > span.swiper-pagination-bullet  {
-      /* width: 90px; */
-      color: red !important;
-      background: red !important;
-    }
+  div.swiper-pagination > span.swiper-pagination-bullet {
+    /* width: 90px; */
+    color: red !important;
+    background: red !important;
+  }
 </style>
 
 <section
@@ -49,10 +49,12 @@ console.log(projects);
   class="h-auto snap-center flex flex-col justify-center mb-32"
 >
   <div>
-    <div class="text-white text-center text-5xl mt-28 mb-12 ">
+    <div class="text-white text-center text-5xl mt-28 mb-12">
       PROYECTOS DESTACADOS
     </div>
-    <div class="w-[75%] mx-auto flex justify-center align-middle gap-5 sm:hidden">
+    <div
+      class="w-[75%] mx-auto flex justify-center align-middle gap-5 sm:hidden"
+    >
       <div class="swiper SwiperDestacados">
         <div class="swiper-wrapper">
           {projects.map((project) => <CardProject project={project} />)}
@@ -62,7 +64,7 @@ console.log(projects);
     </div>
     <div class="w-[100%] mx-auto hidden md:flex justify-center align-middle">
       <div class="">
-        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-10">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-14">
           {projects.map((project) => <CardProject project={project} />)}
         </div>
       </div>
@@ -90,20 +92,20 @@ console.log(projects);
     },
   });*/
   var swiperDestacados = new Swiper(".SwiperDestacados", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+    slidesPerView: 1,
+    spaceBetween: 0,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      //   renderBullet: function (index, className) {
-      //     return '<span class="' + className + '">' + (index + 1) + "</span>";
-      //   },
-      // },
-    });
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    //   renderBullet: function (index, className) {
+    //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+    //   },
+    // },
+  });
 </script>

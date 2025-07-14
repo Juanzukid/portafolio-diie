@@ -45,7 +45,7 @@ export const projects = [
     {
 
         id_project: "5",
-        title: "SIMA",
+        title: "Sistema Integral de Manejo de Aguas",
         description: descriptions.sima,
         logo: "sima-logo.png",
         functions: JSON.stringify(funciones.sima),
@@ -67,7 +67,7 @@ export const projects = [
     {
 
         id_project: "7",
-        title: "Vehículo",
+        title: "Sistema de Gestión de Vehículos",
         description: descriptions.vehiculo,
         logo: "vehiculo-logo.png",
         functions: JSON.stringify(funciones.vehiculo),
