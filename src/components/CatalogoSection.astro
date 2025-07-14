@@ -5,9 +5,9 @@ const { title, index, items } = Astro.props;
 ---
 
 <div
-  class="flex flex-col justify-between text-white gap-5 rounded border-dashed border-2 border-zinc-50 px-2 py-4"
+  class="flex flex-col justify-between text-white gap-5 rounded border-dashed border-2 border-zinc-50 px-2 py-4 relative"
 >
-  <div class="text-center text-4xl bg-blue-900/25 py-1">
+  <div class="text-center text-4xl bg-blue-900/25 py-1 sticky top-[4rem]">
     {title}
   </div>
   <div class="flex flex-col gap-8">
