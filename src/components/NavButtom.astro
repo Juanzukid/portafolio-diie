@@ -2,8 +2,10 @@
 const { titulo } = Astro.props;
 ---
 
-<div class="w-[150px] text-center">
-  <a href=`#${titulo}` class="btn-primary text-2xl rounded px-3 py-2 text-white"
+<div class="lg:w-[150px] text-center">
+  <a
+    href=`#${titulo}`
+    class="btn-primary text-sm md:text-2xl rounded px-3 py-2 text-white"
     >{titulo}</a
   >
 </div>

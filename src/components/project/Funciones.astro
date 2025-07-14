@@ -22,7 +22,7 @@ console.log(parseFunctions);
       <Funcion />
     </div>
   </div> -->
-  <div class="px-4 grid grid-cols-2 gap-6 mt-12">
+  <div class="px-4 grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
     {
       Object.entries(parseFunctions).map(([key, value]) => (
         <Funcion key={key} funcion={value} />
